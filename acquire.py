@@ -46,7 +46,7 @@ def get_blog_links():
         links_from_blog.append(all_a[i]['href'])
 
     # show me the links from the main blog page
-    return links_from_blog
+    return links_from_blog 
 
 def get_title_article_text(url):
     '''
