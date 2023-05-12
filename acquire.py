@@ -92,7 +92,12 @@ def get_blog_articles():
         # create a new entry in the dictionary that corresponds with the index
         blog_articles[i] = {'title': get_title_article_text(url)[0], # call function to get the title text (0th item returned) store it as the title value 
          'content': get_title_article_text(url)[1]} # call the function to get the main content text (1st item returns) and store it as the content value
+       
+        # removing the \n from the text
+        blog_articles[i]['title'] = re.sub(r"\n", ' ',blog_articles[i]['title'])
+        blog_articles[i]['content'] = re.sub(r"\n", ' ',blog_articles[i]['content'])
 
+        
     # exit functyion and returns dictionary of dictionaries 
     return blog_articles
 
