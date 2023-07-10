@@ -1,5 +1,5 @@
 # imports 
-import pandas
+import pandas as pd
 import re
 import unicodedata
 import nltk
@@ -65,7 +65,7 @@ def lemmatize(string):
     wnl = nltk.stem.WordNetLemmatizer()
 
     # getting a list of root words from each word in the split string
-    lemmas = [wnl.lemmatize(word) for word in tokenized.split()]
+    lemmas = [wnl.lemmatize(word) for word in string.split()]
 
     # rejoining the list of root words to form a lemmatized corpus
     lemmatized = ' '.join(lemmas)

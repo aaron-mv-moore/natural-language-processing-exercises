@@ -62,7 +62,7 @@ def get_title_article_text(url):
     response = get(url, headers=headers)
     
     # get soup from response
-    soup = BeautifulSoup(response.text)
+    soup = BeautifulSoup(response.text, 'html.parser')
     
     # get the article
     article = soup.find('div', id='main-content')
